@@ -1,6 +1,8 @@
 import { useRef } from 'react';
 import EachList from '../components/EachList';
 
+const todoPlaceholders = ['Got something to do? Drop it here.', 'What’s on your mind today?', 'No tasks yet. Let’s get productive!', 'Tap here to add your todo magic.', 'Add something you’ll finish today.', 'Ready, set, add a todo!', 'Your todo list starts here.'];
+
 function All({ todos, func, isThemeDark }) {
   const { completedFunc, removeTodoFunc } = func;
 
@@ -21,5 +23,3 @@ function All({ todos, func, isThemeDark }) {
 }
 
 export default All;
-
-var todoPlaceholders = ['Got something to do? Drop it here.', 'What’s on your mind today?', 'No tasks yet. Let’s get productive!', 'Tap here to add your todo magic.', 'Add something you’ll finish today.', 'Ready, set, add a todo!', 'Your todo list starts here.'];

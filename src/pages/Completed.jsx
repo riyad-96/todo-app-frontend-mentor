@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import EachList from '../components/EachList';
 
+const completedPlaceholder = ['You haven’t completed any tasks yet.', 'No completed tasks yet. Let’s go!', 'Nothing completed yet. You got this 💪.', 'No victories here yet. Keep going.', 'Complete a task to see it here!'];
+
 function Completed({ todos, func, isThemeDark }) {
   const { completedFunc, removeTodoFunc } = func;
   const [completedTodos, setCompletedTodos] = useState(todos);
@@ -26,5 +28,3 @@ function Completed({ todos, func, isThemeDark }) {
 }
 
 export default Completed;
-
-var completedPlaceholder = ['You haven’t completed any tasks yet.', 'No completed tasks yet. Let’s go!', 'Nothing completed yet. You got this 💪.', 'No victories here yet. Keep going.', 'Complete a task to see it here!'];

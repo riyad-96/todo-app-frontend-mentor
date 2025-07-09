@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import EachList from '../components/EachList';
 
+const activePlaceholder = ['No active tasks. Take a deep breath.', 'All tasks are done. Add more when ready.', 'You’re free right now. What’s next?', 'No active todos. Enjoy your peace 🕊️.', 'Nothing left here! Feeling productive?'];
+
 function Active({ todos, func, isThemeDark }) {
   const { completedFunc, removeTodoFunc } = func;
   const [activeTodos, setActiveTodos] = useState(todos);
@@ -26,5 +28,3 @@ function Active({ todos, func, isThemeDark }) {
 }
 
 export default Active;
-
-var activePlaceholder = ['No active tasks. Take a deep breath.', 'All tasks are done. Add more when ready.', 'You’re free right now. What’s next?', 'No active todos. Enjoy your peace 🕊️.', 'Nothing left here! Feeling productive?'];
