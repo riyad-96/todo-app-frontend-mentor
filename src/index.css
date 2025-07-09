@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'josefin-sans';
+  src: url('./assets/fonts/josefin-sans-v32-latin-700.woff2');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'josefin-sans';
+  src: url('./assets/fonts/josefin-sans-v32-latin-400.woff2');
+  font-weight: 400;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+:root {
+  /* primary */
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+  /* light-theme */
+  --very-light-gray: hsl(0, 0%, 98%);
+  --very-light-grayish-blue: hsl(236, 33%, 92%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+  /* dark-theme */
+  --very-dark-blue: hsl(235, 21%, 11%);
+  --very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --light-grayish-blue-dark: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue-dark: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue-dark: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue-darker: hsl(237, 14%, 26%);
+
+  --main-bg: var(--very-light-gray);
+  --todo-body-bg: var(--very-light-gray);
+  --todo-border-clr: var(--very-light-grayish-blue);
+  --check-border-clr: var(--light-grayish-blue);
+  --text-clr: var(--very-dark-grayish-blue);
+  --text-hover: var(--very-dark-desaturated-blue);
+  --nav-btn-text-clr: var(--dark-grayish-blue);
+  --nav-btn-hover-text-clr: var(--very-dark-grayish-blue);
+  --line-through: var(--light-grayish-blue);
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --main-bg: var(--very-dark-blue);
+  --todo-body-bg: var(--very-dark-desaturated-blue);
+  --todo-border-clr: var(--very-dark-grayish-blue-darker);
+  --check-border-clr: var(--very-dark-grayish-blue-dark);
+  --text-clr: var(--light-grayish-blue-dark);
+  --text-hover: var(--light-grayish-blue-hover);
+  --nav-btn-text-clr: var(--dark-grayish-blue);
+  --nav-btn-hover-text-clr: var(--very-dark-grayish-blue);
+  --line-through: var(--very-dark-grayish-blue-dark);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg: var(--very-dark-blue);
+    --todo-body-bg: var(--very-dark-desaturated-blue);
+    --todo-border-clr: var(--very-dark-grayish-blue-darker);
+    --check-border-clr: var(--very-dark-grayish-blue-dark);
+    --text-clr: var(--light-grayish-blue-dark);
+    --text-hover: var(--light-grayish-blue-hover);
+    --nav-btn-text-clr: var(--dark-grayish-blue);
+    --nav-btn-hover-text-clr: var(--very-dark-grayish-blue);
+    --line-through: var(--very-dark-grayish-blue-dark);
+  }
+} */
+
+@theme {
+  --font-josefin: 'josefin-sans';
+}
