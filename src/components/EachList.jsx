@@ -4,12 +4,12 @@ function EachList({ todo, func, isThemeDark }) {
 
   return (
     <div className="group flex h-[65px] items-center gap-6 border-b-1 border-(--todo-border-clr) px-6">
-      <button onClick={() => completedFunc(id)} className={`relative grid size-[25px] cursor-pointer place-items-center rounded-full bg-(--check-border-clr) from-[hsl(192,100%,67%)] to-[hsl(280,87%,65%)] group-hover:bg-linear-to-br ${completeState ? 'bg-linear-to-br' : ''}`}>
+      <button type="button" aria-label="Checkbox" onClick={() => completedFunc(id)} className={`relative grid size-[25px] cursor-pointer place-items-center rounded-full bg-(--check-border-clr) from-[hsl(192,100%,67%)] to-[hsl(280,87%,65%)] group-hover:bg-linear-to-br ${completeState ? 'bg-linear-to-br' : ''}`}>
         <span className={`absolute inset-[1px] z-1 rounded-full bg-(--todo-body-bg) transition-opacity ${completeState && 'opacity-0'}`}></span>
         {checkSvg()}
       </button>
       <span className={`flex-1 ${completeState && 'line-through text-(--line-through) cursor-default'}`}>{task}</span>
-      <button onClick={() => removeTodoFunc(id)} data-id={id} className="relative cursor-pointer transition-opacity group-hover:opacity-50 hover:opacity-100 [@media(pointer:fine)]:opacity-0">
+      <button type="button" aria-label="Remove todo" onClick={() => removeTodoFunc(id)} data-id={id} className="relative cursor-pointer focus-visible:opacity-100 transition-opacity group-hover:opacity-50 hover:opacity-100 [@media(pointer:fine)]:opacity-0">
         {removeSvg(`${isThemeDark && 'fill-zinc-400'}`)}
         <span className="absolute -inset-2 [@media(pointer:fine)]:hidden"></span>
       </button>

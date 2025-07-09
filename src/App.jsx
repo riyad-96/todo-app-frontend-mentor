@@ -96,11 +96,11 @@ function App() {
     <div data-theme={isThemeDark && 'dark'} className="font-josefin relative h-screen max-h-screen overflow-hidden text-lg">
       <Background isThemeDark={isThemeDark} />
 
-      <div className="relative h-screen max-h-screen overflow-y-auto">
+      <div className="relative z-1 h-screen max-h-screen overflow-y-auto">
         <main className="mx-auto box-content max-w-[540px] px-6 py-16">
           <header className="flex h-[100px] items-center justify-between">
             <h1 className="text-[2.325rem] font-bold tracking-[0.925rem] text-white">TODO</h1>
-            <button data-ripple onClick={handleTheme} className="relative grid size-10 cursor-pointer place-items-center rounded-full transition-colors duration-200 hover:bg-white/10">
+            <button type="button" aria-label="Theme switcher button" onClick={handleTheme} className="relative grid size-10 cursor-pointer place-items-center rounded-full transition-colors duration-200 hover:bg-white/10">
               {isThemeDark ? sunSvg() : moonSvg()}
             </button>
           </header>
@@ -108,7 +108,7 @@ function App() {
           <div className="space-y-6 text-(--text-clr)">
             <div className="flex h-[65px] items-center gap-6 rounded-md bg-(--todo-body-bg) px-6 shadow-xl shadow-black/5">
               <div onClick={addTodos} className="size-[25px] cursor-pointer rounded-full border border-(--check-border-clr)"></div>
-              <input value={input} onKeyDown={keyboardShortcut} onChange={(e) => setInput(e.target.value)} type="text" placeholder="Create a new todo..." className="flex-1 text-lg outline-none h-[40px]" />
+              <input value={input} onKeyDown={keyboardShortcut} onChange={(e) => setInput(e.target.value)} type="text" placeholder="Create a new todo..." className="h-[40px] flex-1 text-lg outline-none" />
             </div>
 
             <div className="rounded-md bg-(--todo-body-bg) shadow-xl shadow-black/10">
@@ -135,7 +135,7 @@ function App() {
                   </NavLink>
                 </div>
 
-                <button onClick={clearCompleted} className="cursor-pointer hover:text-(--text-hover)">
+                <button type="button" onClick={clearCompleted} className="cursor-pointer hover:text-(--text-hover)">
                   Clear completed
                 </button>
               </div>
