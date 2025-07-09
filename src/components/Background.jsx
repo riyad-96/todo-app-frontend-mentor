@@ -3,7 +3,7 @@ import React from 'react';
 function Background({ isThemeDark }) {
   return (
     <div className="absolute inset-0 h-full w-full">
-      <div className="h-[35%]">
+      <div className="h-[35%] bg-(--main-bg)">
         {isThemeDark && (
           <picture>
             <source media="(width>=540px)" srcSet="images/bg-desktop-dark.jpg" />
